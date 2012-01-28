@@ -1,0 +1,99 @@
+#summary One-sentence summary of this page.
+
+= Bridge Example - Creating Activity =
+
+This shows an example of how to create an Activity using AiBridge
+
+
+= Code Example =
+
+Here is a simple Activity class that uses AiBridge
+
+<code>
+package com.example;
+
+import com.google.devtools.simple.runtime.components.Component;
+import com.google.devtools.simple.runtime.components.HandlesEventDispatching;
+import com.google.devtools.simple.runtime.components.android.*;
+import com.google.devtools.simple.runtime.events.EventDispatcher;
+
+
+public class ActivityExample extends Form implements HandlesEventDispatching {
+
+    //Initialize components
+    TextBox textBox;
+    Button btnSubmit;
+    Button btnCancel;
+    HorizontalArrangement horiz;
+
+    //This is basically the main method. This method will automatically be invoked 
+    // when the onCreate is invoked
+    void $define()
+    {
+        //Define a HorizontalArrangement that horizontally fills the screen
+        horiz = new HorizontalArrangement(this, LENGTH_FILL_PARENT);
+
+        //Add a text box in the Horizontal Arrangement
+        new Label(horiz, "Enter Name: ");
+        //Next to the above label, add a text box and set it to fill parent
+        textBox = new TextBox(horiz, "", LENGTH_FILL_PARENT);
+
+
+        //reuse the same HorizontalArrangement
+        horiz = new HorizontalArrangement(this, LENGTH_FILL_PARENT);
+
+        //Now in this layout, add 2 buttons as follows. The buttons will size accordingly to fill screen
+        btnSubmit = new Button(this, "Submit", LENGTH_FILL_PARENT);
+        btnCancel = new Button(this, "Cancel", LENGTH_FILL_PARENT);
+
+
+        //Register listener for Click event
+        EventDispatcher.registerEventForDelegation(this, "appName", "Click");
+
+    }
+
+    //The dispatchEvent is used to trap the events
+    @Override
+    public boolean dispatchEvent(Component component, String id, String eventName,
+                                 Object[] args)
+    {
+
+        if (eventName.equals("Click"))
+        {
+            //We are now dealing with Click event. 
+            if (component.equals(btnSubmit))
+            {
+                //Submit button was clicked
+
+                //Add logic here
+
+                //return true
+                return true;
+            }
+            else if (component.equals(btnCancel))
+            {
+                //Cancel button was clicked
+
+                //Add logic here
+
+                //return true
+                return true;
+            }
+            else
+            {
+                //Some other button was clicked. Handle logic as needed
+
+                //Return false indicating that we did not process this event
+                return false;
+            }
+        }
+
+        //Add event checking here
+
+        return false;
+
+    }
+}
+
+
+</code>:
