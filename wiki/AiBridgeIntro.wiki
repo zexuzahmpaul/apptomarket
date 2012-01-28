@@ -9,3 +9,8 @@ AiBridge is a super-set of original App Inventor Bridge that simplifies developi
 
 AiBridge is a set of library based on original App Inventor Bridge that simplifies development of Android applications. The library includes many visual and non-visual components for building apps. Refer to BridgeActivity for an example of how to create an Activity using AiBridge
 
+* Usage *
+  # Download latest version of AiBridge jar file from Downloads section
+  # Use your favorite Java IDE, create a project and set up library path pointing to AiBridge
+  # For API doc see http://www.3nportal.com/AIBridgeAPI
+
