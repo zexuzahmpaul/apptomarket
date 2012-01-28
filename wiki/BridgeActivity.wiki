@@ -123,8 +123,7 @@ public class ActivityExample extends Form implements HandlesEventDispatching {
 
     private void handleError(String component, String functionName, int errorNumber, String message)
     {
-        //Add some initialization logic here
+        //Add error processing logic here
     }
 }
-
 </code>:
