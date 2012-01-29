@@ -17,7 +17,7 @@ import com.google.devtools.simple.runtime.components.HandlesEventDispatching;
 import com.google.devtools.simple.runtime.components.android.*;
 import com.google.devtools.simple.runtime.events.EventDispatcher;
 
-
+//A simple class that demonstrates how to create a Form (Android Activity) using AiBridge.
 public class ActivityExample extends Form implements HandlesEventDispatching {
 
     //Initialize components
@@ -26,8 +26,7 @@ public class ActivityExample extends Form implements HandlesEventDispatching {
     Button btnCancel;
     HorizontalArrangement horiz;
 
-    //This is basically the main method. This method will automatically be invoked 
-    // when the onCreate is invoked
+    //This is basically the main method. This method will automatically be invoked when the onCreate is invoked
     void $define()
     {
         //Define a HorizontalArrangement that horizontally fills the screen
@@ -38,8 +37,8 @@ public class ActivityExample extends Form implements HandlesEventDispatching {
         //Next to the above label, add a text box and set it to fill parent
         textBox = new TextBox(horiz, "", LENGTH_FILL_PARENT);
 
-
-        //reuse the same HorizontalArrangement
+        //reuse the same HorizontalArrangement 
+        //
         horiz = new HorizontalArrangement(this, LENGTH_FILL_PARENT);
 
         //Now in this layout, add 2 buttons as follows. The buttons will size accordingly to fill screen
