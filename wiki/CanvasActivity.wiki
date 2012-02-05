@@ -1,4 +1,4 @@
-#summary AiBridge - Using Canvas
+#summary AiBridge - C> Using Canvas
 
 = Bridge Example - Using Canvas =
 
