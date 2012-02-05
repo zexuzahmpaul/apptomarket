@@ -27,15 +27,16 @@ public class CanvasActivity extends Form implements HandlesEventDispatching {
        
         //TODO: other compoents
 
-		//register events. Initialize is invoked when app is started OR when phone orientatin is changed
+	//register events. Initialize is invoked when app is started OR when phone orientatin is changed
         EventDispatcher.registerEventForDelegation(this, "appName", "Initialize");
 	  
     }
 
+    //method for trapping events
     @Override
     public boolean dispatchEvent(Component component, String id, String eventName, Object[] args)
     {
-		//Event handling
+	//Event handling
         if (component.equals(this) && eventName.equals("Initialize"))
         {
             initData();
