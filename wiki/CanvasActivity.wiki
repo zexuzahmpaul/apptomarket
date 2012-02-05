@@ -20,7 +20,7 @@ public class CanvasActivity extends Form implements HandlesEventDispatching {
    
     void $define()
     {
-         //TODO: init components 
+        //TODO: init components 
      
         canvas = new Canvas(this);
         imageSprite = new ImageSprite(canvas);
@@ -42,15 +42,17 @@ public class CanvasActivity extends Form implements HandlesEventDispatching {
             initData();
             return true;
         }
-        //TODO:
+        //TODO: More event handling
+
+        return false;
     }
    
     
-	//Method called from our event handling processor. This is the place
-	//you can set properties such as height / width
+    //Method called from our event handling processor. This is the place
+    //you can set properties such as height / width
     private void initData()
     {
-		//set the canvas size to be same as screen size
+        //set the canvas size to be same as screen size
         canvas.Height(this.Height());
         canvas.Width(this.Width());
         canvas.BackgroundImage("someImage.jpg");
@@ -60,13 +62,14 @@ public class CanvasActivity extends Form implements HandlesEventDispatching {
         imageSprite.Y(this.Height() - imageSprite.Height() - 20);
 
         imageSprite.Speed(2);
+        //IMPORTANT: You HAVE TO invoke initialize method
         imageSprite.Initialize();
         imageSprite.Interval(32);
         imageSprite.Enabled(true);
 
     }
 
-   //TODO:
+   //TODO: 
 }
 
 </code>
