@@ -7,7 +7,7 @@ Every application must have an AndroidManifest.xml file (with precisely that nam
 
 = Code Example =
 
-Here is a simple example of an Android Manifest file
+Below is a simple example of an Android Manifest file. Please note that the activities for ListPicker and WebView have specifically been added to work when using AiBridge
 
 <code>
 <?xml version="1.0" encoding="utf-8"?>
@@ -29,14 +29,14 @@ Here is a simple example of an Android Manifest file
         </activity>
 
 
-        <!-- Activity neded for ListPicker -->
+        <!-- Activity needed for ListPicker -->
         <activity android:name="com.google.devtools.simple.runtime.components.android.ListPickerActivity"
                   android:screenOrientation="behind"
                   android:configChanges="keyboardHidden|orientation">
         </activity>
 
 
-        <!-- Activity neded for WebView -->
+        <!-- Activity needed for WebView -->
         <activity android:name="com.google.devtools.simple.runtime.components.android.WebViewActivity"
                   android:screenOrientation="behind"
                   android:configChanges="keyboardHidden|orientation" >
