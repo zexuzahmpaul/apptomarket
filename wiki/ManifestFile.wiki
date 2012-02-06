@@ -21,10 +21,13 @@ Here is a simple example of an Android Manifest file. For detailed info, please 
         <activity android:name=".MyActivity"
                   android:label="@string/app_name" android:screenOrientation="portrait">
             <intent-filter>
+
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+
 
         <!-- Activity neded for ListPicker -->
         <activity android:name="com.google.devtools.simple.runtime.components.android.ListPickerActivity"
