@@ -2,12 +2,12 @@
 
 = AndroidManifest =
 
-Every application must have an AndroidManifest.xml file (with precisely that name) in its root directory. The manifest presents essential information about the application to the Android system, information the system must have before it can run any of the application's code.
+Every application must have an AndroidManifest.xml file (with precisely that name) in its root directory. The manifest presents essential information about the application to the Android system, information the system must have before it can run any of the application's code. For detailed info, please see here: http://developer.android.com/guide/topics/manifest/manifest-intro.html
 
 
 = Code Example =
 
-Here is a simple example of an Android Manifest file. For detailed info, please see here: http://developer.android.com/guide/topics/manifest/manifest-intro.html
+Here is a simple example of an Android Manifest file
 
 <code>
 <?xml version="1.0" encoding="utf-8"?>
