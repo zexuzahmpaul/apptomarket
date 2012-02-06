@@ -12,4 +12,4 @@ AiBridge is a set of library based on original App Inventor Bridge that simplifi
 * Usage *
   # Download latest version of AiBridge jar file from Downloads section
   # Use your favorite Java IDE, create a project and set up library path pointing to AiBridge
-  # For API doc see http://www.3nportal.com/AIBridgeAPI
+  # For API doc see http://www.3nportal.com/BridgeAPI/
