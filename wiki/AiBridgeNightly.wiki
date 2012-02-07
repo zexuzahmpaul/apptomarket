@@ -19,10 +19,11 @@ To download this nightly, use Downloads link or here: http://code.google.com/p/a
    // create sorted list
    YailList yailListSorted= YailList.makeList(items, true);
 
-   //now, add the items to a ListPicker 
-   myListPickerElements(yailListSorted);
+   //now, add the items to a ListPicker, and display the sorted items
+   myListPicker.Elements(yailListSorted);
+   myListPicker.open();
 
-   //display results in notifier
+   //For debug purpose, display sun-sorted, sorted results in notifier
    notifier.ShowMessageDialog("Unsorted\n"+yailListUnsorted+"\n\nSorted\n"+yailListSorted, "unsorted vs sorted", "Okay");
 </code> 
 
