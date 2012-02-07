@@ -1,0 +1,28 @@
+#AiBridge - Z> Nightly Build
+
+= Introduction =
+
+This page includes updates / enhancements to AiBridge, based on latest AiBridge version, currently v1.0.1
+
+
+= Details =
+
+   1. YailList can now be sorted in unsorted or sorted order; e.g.
+<code>
+   //create a string array for test purpose
+   String[] items = new String[]{"b", "c", "a"};
+
+   // create un-sorted list
+   YailList yailListUnsorted= YailList.makeList(items);
+   // create sorted list
+   YailList yailListSorted= YailList.makeList(items, true);
+
+   //display results in notifier
+   notifier.ShowMessageDialog("Unsorted\n"+yailListUnsorted+"\n\nSorted\n"+yailListSorted, "unsorted vs sorted", "Okay");
+</code> 
+
+   2. You can now control the screen to stay ON or OFF for your app
+<code>
+        //keep screen on while this application is running
+        setKeepScreenOn(true);
+</code>
