@@ -2,7 +2,7 @@
 
 = Introduction =
 
-This page includes updates / enhancements to AiBridge, based on latest AiBridge version, currently v1.0.1
+This page includes updates / enhancements to AiBridge, based on latest AiBridge version, currently v1.0.1. To download this nightly, using Downloads link, find AiBridgeNightly.jar
 
 
 = Details =
