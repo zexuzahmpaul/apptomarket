@@ -15,10 +15,11 @@ To download this nightly, use Downloads link or here: http://code.google.com/p/a
 
    // create un-sorted list
    YailList yailListUnsorted= YailList.makeList(items);
+
    // create sorted list
    YailList yailListSorted= YailList.makeList(items, true);
 
-   //now, add the items to a ListPicker
+   //now, add the items to a ListPicker 
    myListPickerElements(yailListSorted);
 
    //display results in notifier
