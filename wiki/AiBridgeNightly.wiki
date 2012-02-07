@@ -27,7 +27,7 @@ To download this nightly, use Downloads link or here: http://code.google.com/p/a
 </code> 
 
 2. You can now control the screen to stay ON or OFF for your app
-<code>
+<code>. This feature will useful for GPS / Map apps and when you like to keep the screen ON
    //keep screen on while this application is running
    setKeepScreenOn(true);
 </code>
