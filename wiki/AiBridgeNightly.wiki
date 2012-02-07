@@ -1,4 +1,4 @@
-#AiBridge - Z> Nightly Build#
+#summary AiBridge - Z> Nightly Build
 
 = Introduction =
 
