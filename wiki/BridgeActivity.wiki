@@ -49,6 +49,7 @@ public class ActivityExample extends Form implements HandlesEventDispatching {
         //2nd argument can be anything
         //3rd argument is the Event Name. An event name equates to App Inventor events. For example look at
         //App Inventor ListPicker in the Blocks Editor; it has AfterPicking, BeforePicking, GotFocus, LostFocus
+        
         //However, ListPicker does not take in any arguments (note in AI, block does not have any sockets)
         //Another example is Screen1. It has ErrorOccured event (check it in App Inventor). This event has
         //arguments (4 sockets in AI)
