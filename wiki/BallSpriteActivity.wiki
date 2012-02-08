@@ -2,7 +2,7 @@
 
 = Bridge Example - Shows how to use CollidedWith =
 
-This examples shows how to use ImageSprite and Ball colliding with each other and the edges of screen. See NOTE on what NOT TO do to avoid a force-close
+This examples shows how to use ImageSprite and Ball colliding with each other and the edges of screen. See NOTE on args[0]
 
 
 = Code Example =
@@ -53,17 +53,15 @@ public class BallAndImageSpriteActivity extends Form implements HandlesEventDisp
         } else if (eventName.equals("CollidedWith")) {
             //Ball and ImageSprite are colliding with each other
             if (component.equals(ball)) {
-                // NOTE: Following will cause error, because Bounce() will take in Integer values from 1-4.
-                // When sprites collide, args[0] will be of type Sprite, causing Class Cast exception
-                // ball.Bounce((Integer) args[0]);
+                // NOTE: args[0] will be of type Sprite
 
                 //Change its direction -- use static or random
                 ball.Heading(ball.Heading() - 22);
                 return true;
             } else if (component.equals(imageSprite)) {
-                // NOTE: Following will cause error, because Bounce() will take in Integer values from 1-4.
-                // When sprites collide, args[0] will be of type Sprite, causing Class Cast exception
-                // imageSprite.Bounce((Integer) args[0]);
+                // NOTE: args[0] will be of type Sprite
+
+                //Change its direction -- use static or random
 
                 //Change its direction -- use static or random
                 imageSprite.Heading(imageSprite.Heading() - 55);
