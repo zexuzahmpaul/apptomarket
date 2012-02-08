@@ -52,14 +52,14 @@ public class BallAndImageSpriteActivity extends Form implements HandlesEventDisp
         } else if (eventName.equals("CollidedWith")) {
 
             if (component.equals(ball)) {
-                // NOTE: Following will cause error, because it will Bounce() will take in values from 1-4.
-                // When sprites collide, args[0] will be of type Sprite
+                // NOTE: Following will cause error, because Bounce() will take in Integer values from 1-4.
+                // When sprites collide, args[0] will be of type Sprite, causing Class Cast exception
                 // ball.Bounce((Integer) args[0]);
                 ball.Heading(ball.Heading() - 22);
                 return true;
             } else if (component.equals(imageSprite)) {
-                // NOTE: Following will cause error, because it will Bounce() will take in values from 1-4.
-                // When sprites collide, args[0] will be of type Sprite
+                // NOTE: Following will cause error, because Bounce() will take in Integer values from 1-4.
+                // When sprites collide, args[0] will be of type Sprite, causing Class Cast exception
                 // imageSprite.Bounce((Integer) args[0]);
                 imageSprite.Heading(imageSprite.Heading() - 55);
                 return true;
