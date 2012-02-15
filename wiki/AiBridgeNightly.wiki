@@ -24,7 +24,9 @@ To download this nightly, use Downloads link or here: http://code.google.com/p/a
    myListPicker.open();
 
    //For debug purpose, display sun-sorted, sorted results in notifier
-   notifier.ShowMessageDialog("Unsorted\n"+yailListUnsorted+"\n\nSorted\n"+yailListSorted, "unsorted vs sorted", "Okay");
+   notifier.ShowMessageDialog("Unsorted\n" + yailListUnsorted + "\n\nSorted\n" + yailListSorted, 
+                "unsorted vs sorted", 
+                "Okay");
 </code> 
 
 2. You can now control the screen to stay ON or OFF for your app
