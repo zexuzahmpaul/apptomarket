@@ -1,4 +1,4 @@
-#summary AiBridge - D> AndroidManifest.xml file
+#summary AiBridge - D> AndroidManifest file
 
 = AndroidManifest =
 
