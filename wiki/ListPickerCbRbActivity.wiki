@@ -8,22 +8,15 @@ An example to show how to create list pickers that have either Checkboxes or Rad
 
 = Details =
 
-Now, you can create a list that includes Checkboxes OR Radiobuttons. Setup and initialization is pretty much like usual ListPicker. See code below to see example. Here is how listpickers look like: <br >[http://www.3nportal.com/wikiImages/listPicker.jpg]
+Now, you can create a list that includes Checkboxes OR Radiobuttons. Setup and initialization is pretty much like usual ListPicker. See download section (ListPickerCbRbActivity.java ) for full code example. Here is how output looks like:
+<br >[http://www.3nportal.com/wikiImages/listPicker.jpg]
+
 <code>
-package com.example3;
-import com.google.devtools.simple.runtime.components.Component;
-import com.google.devtools.simple.runtime.components.HandlesEventDispatching;
-import com.google.devtools.simple.runtime.components.android.Form;
-import com.google.devtools.simple.runtime.components.android.ListPickerCheckbox;
-import com.google.devtools.simple.runtime.components.android.TextBox;
-import com.google.devtools.simple.runtime.components.util.YailList;
-import com.google.devtools.simple.runtime.events.EventDispatcher;
-
-import java.util.Arrays;
-
-
+...
+...
 public class ListPickerCbRbActivity extends Form implements HandlesEventDispatching {
-
+...
+...
     //Declare 2 ListPickerCheckbox, one for checkbox, the other for radio button examples
     //These are like buttons
     ListPickerCheckbox listPickerCheckboxMulti;
@@ -31,7 +24,8 @@ public class ListPickerCbRbActivity extends Form implements HandlesEventDispatch
 
     //A textbox used for debug purpose
     TextBox txtResults;
-
+...
+...
     //create the layout
     void $define() {
         
@@ -65,8 +59,13 @@ public class ListPickerCbRbActivity extends Form implements HandlesEventDispatch
         //register for these events
         EventDispatcher.registerEventForDelegation(this, "test", "Click");
         EventDispatcher.registerEventForDelegation(this, "test", "AfterPicking");
+...
+...
     }
 
+</code>
+Now trap these events in our dispatchEvent like below:
+<code>
     @Override
     public boolean dispatchEvent(Component component, String id, String eventName, Object[] args) {
 
@@ -91,5 +90,6 @@ public class ListPickerCbRbActivity extends Form implements HandlesEventDispatch
 
         return false;
     }
-}
+...
+...
 </code>
