@@ -50,7 +50,7 @@ import com.google.devtools.simple.runtime.events.EventDispatcher;
 import java.util.Arrays;
 
 
-public class ActivityCbAndRb extends Form implements HandlesEventDispatching {
+public class ListPickerCbRbActivity extends Form implements HandlesEventDispatching {
 
     //Declare 2 ListPickerCheckbox, one for checkbox, the other for radio button examples
     //These are like buttons
