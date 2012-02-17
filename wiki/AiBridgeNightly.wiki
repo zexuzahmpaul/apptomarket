@@ -36,7 +36,7 @@ To download this nightly, use Downloads link or here: http://code.google.com/p/a
    setKeepScreenOn(true);
 </code>
 
-3. Now, you can create a list that includes Checkboxes OR Radiobuttons. Setup and initialization is pretty much like usual ListPicker. See code below to see example:
+3. Now, you can create a list that includes Checkboxes OR Radiobuttons. Setup and initialization is pretty much like usual ListPicker. See code below to see example. Here is how listpickers look like: <br >[http://www.3nportal.com/wikiImages/listPicker.jpg]
 <code>
 import com.google.devtools.simple.runtime.components.Component;
 import com.google.devtools.simple.runtime.components.HandlesEventDispatching;
