@@ -86,12 +86,16 @@ Now trap these events in our dispatchEvent like below:
         } else if (eventName.equals("AfterPicking") && component.equals(listPickerCheckboxMulti)) {
             //Get list of selection results. The Selections() will return boolean array of true or false for each
             //list item
-            boolean [] selections =  listPickerCheckboxMulti.Selections();
+            boolean[] selections = listPickerCheckboxMulti.Selections();
 
+            if (selections[2]) {
+                //2nd item was checked, do proper logic here
+            } else {
+                //2nd item was NOT checked, do proper logic here
+            }
             //Now, convert our boolean array into string for displaying result into our textbox field
             //display results in our text box
-            txtResults.Text( Arrays.toString(selections));
-            return true;
+            txtResults.Text(Arrays.toString(selections));
         }
 
         return false;
