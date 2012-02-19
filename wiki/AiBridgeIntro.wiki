@@ -2,14 +2,27 @@
 
 = Introduction =
 
-AiBridge is a super-set of original App Inventor Bridge that simplifies developing Android applications
+AiBridge is a super-set of original App Inventor Bridge that simplifies developing Android applications. AiBridge lets you incorporate App Inventor components into apps that you create in Java with the standard Android SDK tools. 
 
 
 = Details =
 
-AiBridge is a set of library based on original App Inventor Bridge that simplifies development of Android applications. The library includes many visual and non-visual components for building apps. Refer to BridgeActivity for an example of how to create an Activity using AiBridge
+AiBridge is a set of library based on original App Inventor Bridge that simplifies development of Android applications. The library includes many visual and non-visual components for building apps. Refer to BridgeActivity for an example of how to create an Activity using AiBridge. For example, below shows the full code that is required to create a Hello World! app:
+<code>
+package com.example3;
 
-* Usage *
+ import com.google.devtools.simple.runtime.components.HandlesEventDispatching;
+import com.google.devtools.simple.runtime.components.android.Form;
+import com.google.devtools.simple.runtime.components.android.Label;
+
+public class HelloWorldActivity extends Form implements HandlesEventDispatching {
+    void $define() {
+        new Label(this,"Hello World!");
+    }
+}
+</code>
+
+= Usage =
   # Download latest version of AiBridge jar file from Downloads section (you can download the nightly version that includes features / updates that will be rolled into next version)
   # Use your favorite Java IDE, create a project and set up library path pointing to AiBridge jar file
   # For API doc see http://www.3nportal.com/BridgeAPI/
