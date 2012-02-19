@@ -22,7 +22,8 @@ public class HelloWorldActivity extends Form implements HandlesEventDispatching 
 }
 </code>
 
-= Usage =
+= Using the Bridge =
+  # Make sure you have installed Android SDK: http://developer.android.com/sdk/installing.html
   # Download latest version of AiBridge jar file from Downloads section (you can download the nightly version that includes features / updates that will be rolled into next version)
   # Use your favorite Java IDE, create a project and set up library path pointing to AiBridge jar file
   # For API doc see http://www.3nportal.com/BridgeAPI/
