@@ -1,7 +1,7 @@
 #summary AiBridge - G> Creating ListPickers that have either Checkboxes or Radiobuttons
 
 = Introduction =
-An example to show how to create list pickers that have either Checkboxes or RadiButtons. 
+An example to show how to create list pickers that have either Checkboxes or RadioButtons. 
 
 * NOTE: * This is currently included in the NightlyBuild and will later be in the next official release
 
@@ -12,7 +12,6 @@ Now, you can create a list that includes Checkboxes OR Radiobuttons. Setup and i
 <br >[http://www.3nportal.com/wikiImages/listPicker.jpg]
 
 <code>
-...
 ...
 public class ListPickerCbRbActivity extends Form implements HandlesEventDispatching {
 ...
@@ -103,3 +102,7 @@ Now trap these events in our dispatchEvent like below:
 ...
 ...
 </code>
+
+*NOTE:* You must include the following permission in your androidmanifest:
+
+<activity android:name="com.google.devtools.simple.runtime.components.android.ListPickerCheckboxActivity" />
