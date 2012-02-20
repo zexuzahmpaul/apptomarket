@@ -87,10 +87,12 @@ Now trap these events in our dispatchEvent like below:
             //list item
             boolean[] selections = listPickerCheckboxMulti.Selections();
 
+            //code below shows how to check and see if 3rd item is checked or not 
+            //NOTE that 1st element starts at position 0 
             if (selections[2]) {
-                //2nd item was checked, do proper logic here
+                //3rd item was checked, do proper logic here
             } else {
-                //2nd item was NOT checked, do proper logic here
+                //3rd item was NOT checked, do proper logic here
             }
             //Now, convert our boolean array into string for displaying result into our textbox field
             //display results in our text box
