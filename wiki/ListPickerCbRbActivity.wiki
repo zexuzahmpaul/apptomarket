@@ -12,69 +12,71 @@ Now, you can create a list that includes Checkboxes OR Radiobuttons. Setup and i
 <br >[http://www.3nportal.com/wikiImages/listPicker.jpg]
 
 <code>
-...
+import com.google.devtools.simple.runtime.components.Component;
+import com.google.devtools.simple.runtime.components.HandlesEventDispatching;
+import com.google.devtools.simple.runtime.components.android.*;
+import com.google.devtools.simple.runtime.components.android.util.CsvUtil;
+import com.google.devtools.simple.runtime.components.util.YailList;
+import com.google.devtools.simple.runtime.events.EventDispatcher;
+
+import java.util.Arrays;
+
+
 public class ListPickerCbRbActivity extends Form implements HandlesEventDispatching {
-...
-...
+
     //Declare 2 ListPickerCheckbox, one for checkbox, the other for radio button examples
-    //These are like buttons
     ListPickerCheckbox listPickerCheckboxMulti;
     ListPickerCheckbox listPickerCheckboxRb;
 
-    //A textbox used for debug purpose
-    TextBox txtResults;
-...
-...
+    //declare 2 buttons. We display these buttons and once clicked, open their associated picker
+    Button btnCb;
+    Button btnRb;
+
+    TextBox txtCsvItems;   //we use this to enter CSV data and load our picker with data of this text
+    TextBox txtResults;    //A textbox used for debug purpose
+
     //create the layout
     void $define() {
-        
         //init visual components
+        btnCb = new Button(this, "Click for picker in checkboxes style", LENGTH_FILL_PARENT);
+        btnRb = new Button(this, "Click for picker in radio button style", LENGTH_FILL_PARENT);
+
+        new Label(this, "Enter listbox data in csv format:");
+
+        //load some default data
+        txtCsvItems = new TextBox(this, "item1, item2, item3", LENGTH_FILL_PARENT);
+
         listPickerCheckboxMulti = new ListPickerCheckbox(this);
         listPickerCheckboxRb = new ListPickerCheckbox(this);
 
-        //Setup the text to display in the listpicker buttons
-        listPickerCheckboxMulti.Text("Click to open the checkboxes style");
-        listPickerCheckboxRb.Text("Click to open the radio button style");
+        listPickerCheckboxMulti.Visible(false);
+        listPickerCheckboxRb.Visible(false);
 
-        //Load some default values to display in the listpicker
-        String[] strArray = {"item1", "item2", "item3"};
-        YailList yailList = YailList.makeList(strArray);
-
-        //Set the above items into our sample listpickers. We are setting same items into 
-        //both of our listpickers
-        listPickerCheckboxMulti.Elements(yailList);
-        listPickerCheckboxRb.Elements(yailList);
-
-        //Use SelectionStlye to specify if we want multi (checkbox) or single (radtio button)
+        //Use SelectionStlye to specify if we want multi (checkbox) or single (radio button)
         listPickerCheckboxMulti.SelectionStlye(Component.MULTIPLE_CHOICE);
         listPickerCheckboxRb.SelectionStlye(Component.SINGLE_CHOICE);
 
         //for debug purpose, we display results from our listpicker in this text box
         txtResults = new TextBox(this, "Results display here", Component.LENGTH_FILL_PARENT);
-        
-        //hide our softkeyboard
-        hideSoftKeyboard();
 
         //register for these events
         EventDispatcher.registerEventForDelegation(this, "test", "Click");
         EventDispatcher.registerEventForDelegation(this, "test", "AfterPicking");
-...
-...
     }
 
-</code>
-Now trap these events in our dispatchEvent like below:
-<code>
     @Override
     public boolean dispatchEvent(Component component, String id, String eventName, Object[] args) {
 
         if (eventName.equals("Click")) {
             //A visual component was clicked
-            if (component.equals(listPickerCheckboxMulti)) {
+            if (component.equals(btnCb)) {
+                refreshData();
                 //we want to open listpicker in checkbox style
                 listPickerCheckboxMulti.Open();
                 return true;
-            } else if (component.equals(listPickerCheckboxRb)) {
+            }
+            else if (component.equals(btnRb)) {
+                refreshData();
                 //we want to open listpicker in radiobutton style
                 listPickerCheckboxRb.Open();
                 return true;
@@ -82,27 +84,57 @@ Now trap these events in our dispatchEvent like below:
 
             return false;
 
-        } else if (eventName.equals("AfterPicking") && component.equals(listPickerCheckboxMulti)) {
-            //Get list of selection results. The Selections() will return boolean array of true or false for each
-            //list item
+        }
+        else if (eventName.equals("AfterPicking") && component.equals(listPickerCheckboxMulti)) {
+            //Get list of selection results. The Selections() will return boolean array of true or false for the list
             boolean[] selections = listPickerCheckboxMulti.Selections();
 
-            //code below shows how to check and see if 3rd item is checked or not 
-            //NOTE that 1st element starts at position 0 
+            //code below shows how to check and see if 3rd item is checked or not; 1st element is at position 0
             if (selections[2]) {
-                //3rd item was checked, do proper logic here
-            } else {
-                //3rd item was NOT checked, do proper logic here
+                //TODO: 2nd item was checked, add proper logic here
             }
-            //Now, convert our boolean array into string for displaying result into our textbox field
-            //display results in our text box
+
+            //convert boolean array into string for displaying result into our textbox field
             txtResults.Text(Arrays.toString(selections));
+            return true;
+        }
+        else if (eventName.equals("AfterPicking") && component.equals(listPickerCheckboxRb)) {
+            //Get list of selection results. The Selections() will return boolean array of true or false for the list
+            boolean[] selections = listPickerCheckboxRb.Selections();
+
+            //code below shows how to check and see if 3rd item is checked or not; 1st element is at position 0
+            if (selections[2]) {
+                //TODO: 2nd item was checked, add proper logic here
+            }
+
+            //convert boolean array into string for displaying result into our textbox field
+            txtResults.Text(Arrays.toString(selections));
+            return true;
         }
 
         return false;
     }
-...
-...
+
+    /**
+     * Helper method to load our pickers with data that is in the text box
+     */
+    private void refreshData() {
+        YailList yailList = null;
+        try {
+            yailList = CsvUtil.fromCsvRow(txtCsvItems.Text());
+        } catch (Exception e) {
+            System.out.println("Error in parser: " + e.getMessage());
+            //TODO: handle error
+        }
+
+        //Set the above items into our sample listpickers.
+        // We are setting same items into both of our listpickers
+        listPickerCheckboxRb.Elements(yailList);
+        listPickerCheckboxMulti.Elements(yailList);
+
+    }
+
+}
 </code>
 
 *NOTE:* You must include the following permission in your androidmanifest:
