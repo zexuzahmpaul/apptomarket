@@ -63,9 +63,11 @@ public class MySplasher extends Splash {
         //this means just terminate app after splash
         activityToStart = null;
         
-        //use following to switch to a new activity
-        // activityToStart = myNextActivity;   
-        line1Msg ="Thankssss";
+        //Use following to switch to a new activity
+        //NOTE: Make sure you add your activity into androidmanifest.xml 
+        //<activity android:name=".ListPickerCbRbActivity" android:label="@string/app_name" />
+        // activityToStart = "ListPickerCbRbActivity";   
+        line1Msg ="Thanks";
         line2Msg ="For";
         line3Msg ="Using";
         line4Msg ="my App2";
