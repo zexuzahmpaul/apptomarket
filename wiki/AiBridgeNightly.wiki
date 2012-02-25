@@ -72,12 +72,6 @@ public class MySplasher extends Splash {
         line5Msg ="Hope You Enjoy";
         pauseInSeconds=9;
 
-
-        Button aButton = new Button(this,"I'm Centered");
-        aButton.Position(POSITION_CENTER_HORIZONTAL);
-
-        Label aLabel = new Label(this,"I'm right aligned");
-        aLabel.Position(POSITION_RIGHT);
     }
 
 }</code>
