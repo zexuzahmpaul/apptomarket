@@ -37,3 +37,47 @@ To download this nightly, use Downloads link or here: http://code.google.com/p/a
 </code>
 
 3. Now, you can create a list that includes Checkboxes OR Radiobuttons. Setup and initialization is pretty much like usual ListPicker. See code below to see example. Here ListPickerCbRbActivity is the code and Here is how listpickers look like: <br >[http://www.3nportal.com/wikiImages/listPicker.jpg]
+
+4. Added simple methods for component alignment; e.g.:
+<code>
+        Button aButton = new Button(this,"I'm Centered");
+        aButton.Position(POSITION_CENTER_HORIZONTAL);
+
+        Label aLabel = new Label(this,"I'm right aligned");
+        aLabel.Position(POSITION_RIGHT);
+</code>
+
+5. Added Splash class. The Splash can be used to create animated Splash screen that after n number of seconds, invokes your main Form (Activity). Can also be used when you want to terminate an app; e.g. Splash will display for 5 second then app will be closed.
+<code>
+package com.example3;
+
+import com.google.devtools.simple.runtime.components.android.Button;
+import com.google.devtools.simple.runtime.components.android.Label;
+import com.google.devtools.simple.runtime.components.android.util.Splash;
+
+public class MySplasher extends Splash {
+
+    @Override()
+    public void setupAndRun() {
+        
+        //this means just terminate app after splash
+        activityToStart = null;
+        
+        //use following to switch to a new activity
+        // activityToStart = myNextActivity;   
+        line1Msg ="Thankssss";
+        line2Msg ="For";
+        line3Msg ="Using";
+        line4Msg ="my App2";
+        line5Msg ="Hope You Enjoy";
+        pauseInSeconds=9;
+
+
+        Button aButton = new Button(this,"I'm Centered");
+        aButton.Position(POSITION_CENTER_HORIZONTAL);
+
+        Label aLabel = new Label(this,"I'm right aligned");
+        aLabel.Position(POSITION_RIGHT);
+    }
+
+}</code>
