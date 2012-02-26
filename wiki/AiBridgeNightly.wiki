@@ -56,8 +56,6 @@ Added Splash class. The Splash can be used to create animated Splash screen that
 <code>
 package com.example3;
 
-import com.google.devtools.simple.runtime.components.android.Button;
-import com.google.devtools.simple.runtime.components.android.Label;
 import com.google.devtools.simple.runtime.components.android.util.Splash;
 
 public class MySplasher extends Splash {
