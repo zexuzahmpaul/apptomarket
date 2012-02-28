@@ -9,7 +9,7 @@ To download this nightly, use Downloads link or here: http://code.google.com/p/a
 = Details =
 
 ===1. Sorting PickList=== 
-YailList (basically an ArrayList) can now be sorted in unsorted or sorted order. This is useful when you when you want to display sorted items in a ListPicker; e.g.
+YailList (basically an ArrayList) can now be created in unsorted or sorted order. This is useful when you when you want to display sorted items in a ListPicker; e.g.
 <code>
    //create a string array for test purpose
    String[] items = new String[]{"b", "c", "a"};
