@@ -39,7 +39,7 @@ The following are the *_current_* configuration data that can be changed:
 <code>    
        //name of the activity to start after splash ends. 
        //If set to null, then app just terminates; useful when you want to end your app
-       // Please note that your activity has to be declared in androidmanifest.xmls   
+       // Please note that your activity has to be declared in androidmanifest.xml   
        activityToStart = "SomeActivityName" 
         
         pauseInSeconds=5;        //number of seconds to show splash screen
