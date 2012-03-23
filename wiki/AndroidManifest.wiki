@@ -1,4 +1,4 @@
-#summary sdkBridger - D> AndroidManifest file
+#summary sdkBridger - AndroidManifest file
 
 = AndroidManifest =
 
