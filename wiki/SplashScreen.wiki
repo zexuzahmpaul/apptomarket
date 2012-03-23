@@ -1,4 +1,4 @@
-#summary sdkBridger - H> Creating Splash Screen
+#summary sdkBridger - Creating Splash Screen
 
 = Introduction =
 
