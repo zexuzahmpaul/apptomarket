@@ -1,4 +1,4 @@
-#summary sdkBridger - F> Switching between screens (activities)
+#summary sdkBridger - Switching between screens (activities)
 
 = Bridge Example - How to switch between screens =
 
