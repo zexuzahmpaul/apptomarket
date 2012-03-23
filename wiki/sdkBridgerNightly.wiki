@@ -1,4 +1,5 @@
 #summary sdkBridgerNightly- Z> Nightly Build
+#labels Deprecated
 
 = Introduction =
 
