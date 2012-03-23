@@ -1,4 +1,4 @@
-#summary sdkBridger - C> Using Canvas
+#summary sdkBridger - Using Canvas
 
 = Bridge Example - Using Canvas =
 
