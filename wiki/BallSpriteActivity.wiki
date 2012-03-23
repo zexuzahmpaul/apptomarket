@@ -1,4 +1,4 @@
-#summary AiBridge - E> Example to show ImageSprite & Ball CollidedWith
+#summary sdkBridger - E> Example to show ImageSprite & Ball CollidedWith
 
 = Bridge Example - Shows how to use CollidedWith =
 
@@ -7,7 +7,7 @@ This examples shows how to use ImageSprite and Ball colliding with each other an
 
 = Code Example =
 
-Below is to shows how to use ImageSprite and Ball colliding using AiBridge
+Below is to shows how to use ImageSprite and Ball colliding using sdkBridger
 
 <code>
 package com.example;
