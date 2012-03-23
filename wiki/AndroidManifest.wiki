@@ -1,4 +1,4 @@
-#summary AiBridge - D> AndroidManifest file
+#summary sdkBridger - D> AndroidManifest file
 
 = AndroidManifest =
 
@@ -7,7 +7,7 @@ Every application must have an AndroidManifest.xml file (with precisely that nam
 
 = Code Example =
 
-Below is a simple example of an Android Manifest file. Please note that the activities for ListPicker and WebView have specifically been added to work when using AiBridge -- see AiBridgeIntro
+Below is a simple example of an Android Manifest file. Please note that the activities for ListPicker and WebView have specifically been added to work when using sdkBridger -- see sdkBridgerIntro
 
 <code>
 <?xml version="1.0" encoding="utf-8"?>
