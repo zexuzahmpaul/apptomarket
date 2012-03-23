@@ -1,10 +1,10 @@
-#summary AiBridge - B> Creating an Activity
+#summary sdkBridger - B> Creating an Activity
 
-This shows an example of how to create an Activity using AiBridge
+This shows an example of how to create an Activity using sdkBridger
 
 = Code Example =
 
-Here is a simple Activity class that uses AiBridge
+Here is a simple Activity class that uses sdkBridger
 
 <code>
 package com.example;
@@ -16,7 +16,7 @@ import com.google.devtools.simple.runtime.components.Component;
  import com.google.devtools.simple.runtime.events.EventDispatcher;
  
 
-//A simple class that demonstrates how to create a Form (Android Activity) using AiBridge.
+//A simple class that demonstrates how to create a Form (Android Activity) using sdkBridger.
  public class ActivityExample extends Form implements HandlesEventDispatching {
  
 
