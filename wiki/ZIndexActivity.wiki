@@ -1,4 +1,4 @@
-#summary Using Z Index to set order of components
+#summary sdkBridger - Using Z Index to set order of components
 
 = sdkBridger Example - Using Z Index =
 This example shows how to use Z Index to set order of components. 
