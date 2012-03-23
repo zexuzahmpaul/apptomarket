@@ -1,4 +1,4 @@
-#summary sdkBridger - B> Creating an Activity
+#summary sdkBridger - Creating an Activity
 
 This shows an example of how to create an Activity using sdkBridger
 
