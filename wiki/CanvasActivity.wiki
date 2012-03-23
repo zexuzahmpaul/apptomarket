@@ -1,4 +1,4 @@
-#summary AiBridge - C> Using Canvas
+#summary sdkBridger - C> Using Canvas
 
 = Bridge Example - Using Canvas =
 
@@ -6,7 +6,7 @@ This example shows how to use canvas and set such properties as its height and w
 
 = Code Example =
 
-Here is a simple Activity class that uses AiBridge. This example shows how you can initialize Canvas and set such properties as its height and width
+Here is a simple Activity class that uses sdkBridger. This example shows how you can initialize Canvas and set such properties as its height and width
 
 <code>
 //TODO: Add package
