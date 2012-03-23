@@ -1,4 +1,4 @@
-#summary AiBridge - G> Creating ListPickers that have either Checkboxes or Radiobuttons
+#summary sdkBridger - G> Creating ListPickers that have either Checkboxes or Radiobuttons
 
 = Introduction =
 An example to show how to create list pickers that have either Checkboxes or RadioButtons. 
