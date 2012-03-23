@@ -1,14 +1,14 @@
-#summary AiBridge - H> Creating Splash Screen
+#summary sdkBridger - H> Creating Splash Screen
 
 = Introduction =
 
-This shows you how to create a Splash Screen using AiBridge. 
+This shows you how to create a Splash Screen using sdkBridger. 
 
 = Details =
 
 Splash Screens are used to show an app introduction page that appears for a few seconds, while app is loading. After splash screen times-out, then the main screen (activity) of the app should be started.
 
-Creating splash screen in AiBridge is very simple. Here is the code to create a splash screen with default configuration:
+Creating splash screen in sdkBridger is very simple. Here is the code to create a splash screen with default configuration:
 <code>
 package com.example3;
 import com.google.devtools.simple.runtime.components.android.util.Splash;
