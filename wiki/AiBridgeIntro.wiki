@@ -1,4 +1,4 @@
-#summary sdkBridger - A> Introduction
+#summary sdkBridger - Introduction
 
 = Introduction =
 
