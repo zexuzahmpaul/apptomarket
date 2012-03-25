@@ -11,11 +11,10 @@ sdkBridger is a set of library based on original App Inventor Bridge that simpli
 <code>
 package com.example3;
 
- import com.google.devtools.simple.runtime.components.HandlesEventDispatching;
 import com.google.devtools.simple.runtime.components.android.Form;
 import com.google.devtools.simple.runtime.components.android.Label;
 
-public class HelloWorldActivity extends Form implements HandlesEventDispatching {
+public class HelloWorldActivity extends Form {
     void $define() {
         new Label(this,"Hello World!");
     }
