@@ -1,0 +1,80 @@
+#summary sdkBridger - Misc. functionalities
+
+= Introduction =
+
+This wiki shows how to use some common functionalities provided by sdkBridger.
+
+= Details =
+
+===1. Sorting PickList=== 
+YailList (basically an ArrayList) can now be created in unsorted or sorted order. This is useful when you when you want to display sorted items in a ListPicker; e.g.
+<code>
+   //create a string array for test purpose
+   String[] items = new String[]{"b", "c", "a"};
+
+   // create un-sorted list
+   YailList yailListUnsorted= YailList.makeList(items);
+
+   // create sorted list
+   YailList yailListSorted= YailList.makeList(items, true);
+
+   //now, add the items to a ListPicker, and display the sorted items
+   myListPicker.Elements(yailListSorted);
+   myListPicker.open();
+
+   //For debug purpose, display sun-sorted, sorted results in notifier
+   notifier.ShowMessageDialog("Unsorted\n" + yailListUnsorted + "\n\nSorted\n" + yailListSorted, 
+                "unsorted vs sorted", 
+                "Okay");
+</code> 
+
+===2. Keep Screen On===
+You can now control the screen to stay ON or OFF for your app
+. Usage example is when you develop GPS / Navigation apps and you want to avoid screen from turning off.
+<code>
+   //keep screen on while this application is running
+   setKeepScreenOn(true);
+</code>
+
+===3. RadioButton and CheckBox ListPickers===
+Now, you can create a list that includes Checkboxes OR Radiobuttons. Setup and initialization is pretty much like usual ListPicker. See code below to see example. Here ListPickerCbRbActivity is the code and Here is how listpickers look like: <br >[http://www.3nportal.com/wikiImages/listPicker.jpg]
+
+===4. Visual Component Alignment===
+Added simple methods for component alignment; e.g.:
+<code>
+        Button aButton = new Button(this,"I'm Centered");
+        aButton.Position(POSITION_CENTER_HORIZONTAL);
+
+        Label aLabel = new Label(this,"I'm right aligned");
+        aLabel.Position(POSITION_RIGHT);
+</code>
+
+===5. Splash Screen===
+Added Splash class. The Splash can be used to create animated Splash screen that after n number of seconds, invokes your main Form (Activity). Can also be used when you want to terminate an app; e.g. Splash will display for 5 second then app will be closed.
+<code>
+package com.example3;
+
+import com.google.devtools.simple.runtime.components.android.util.Splash;
+
+public class MySplasher extends Splash {
+
+    @Override()
+    public void setupAndRun() {
+        
+        //this means just terminate app after splash
+        activityToStart = null;
+        
+        //Use following to switch to a new activity
+        //NOTE: Make sure you add your activity into androidmanifest.xml 
+        //<activity android:name=".ListPickerCbRbActivity" android:label="@string/app_name" />
+        // activityToStart = "ListPickerCbRbActivity";   
+        line1Msg ="Thanks";
+        line2Msg ="For";
+        line3Msg ="Using";
+        line4Msg ="my App2";
+        line5Msg ="Hope You Enjoy";
+        pauseInSeconds=9;
+
+    }
+
+}</code>
