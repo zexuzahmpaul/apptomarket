@@ -108,7 +108,7 @@ public class ZIndexActivity extends Form implements HandlesEventDispatching {
         //A component with greater order is always in front of another component with lower order.
         ball.Z(10);
         ball2.Z(20);
-        ball2.Z(30);
+        ball3.Z(30);
     }
 
 }
