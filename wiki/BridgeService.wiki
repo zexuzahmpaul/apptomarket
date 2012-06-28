@@ -29,6 +29,7 @@ public class MyService extends BridgeService implements HandlesEventDispatching 
     TinyDB tinyDB;
     Texting texting;
     OrientationSensor orientationSensor;  //Not used in this sample
+    LocationSensor locationSensor;        //Not used in this sample
 
      //This is basically the main method.
     //This method will automatically be invoked when the onCreate is invoked
