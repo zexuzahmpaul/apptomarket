@@ -24,12 +24,13 @@ import com.google.devtools.simple.runtime.events.EventDispatcher;
   */
 public class MyService extends BridgeService implements HandlesEventDispatching {
 
-    //Current components that can be used in service
+     //Current Non-Visual components that can be used in service
+    //No visual components in service
     TinyDB tinyDB;
     Texting texting;
     OrientationSensor orientationSensor;  //Not used in this sample
 
-    //This is basically the main method.
+     //This is basically the main method.
     //This method will automatically be invoked when the onCreate is invoked
     void $define() {
 
@@ -38,7 +39,7 @@ public class MyService extends BridgeService implements HandlesEventDispatching 
         texting.ReceivingEnabled(true);
         orientationSensor = new OrientationSensor(this);
 
-        //Register listeners for Initialize and MessageReceived events.
+         //Register listeners for Initialize and MessageReceived events.
         //2nd argument can be anything
         //3rd argument is the Event Name. An event name equates to App Inventor events. For example look at
         //App Inventor Texting in the Blocks Editor
@@ -85,11 +86,11 @@ public class MyService extends BridgeService implements HandlesEventDispatching 
     {
         //TODO: add logic here
 
-        //Sample code. Store into our TinyDB
+         //Sample code. Store into our TinyDB
         tinyDB.StoreValue("TAG_PHONE_NUMBER", fromNumber);
         tinyDB.StoreValue("TAG_RECEIVED_MESSAGE", message);
 
-        //Send some response back
+         //Send some response back
         texting.PhoneNumber(fromNumber);
         texting.Message("Received your message of: " + message);
         texting.SendMessage();
