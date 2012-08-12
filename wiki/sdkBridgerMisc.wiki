@@ -18,11 +18,11 @@ YailList (basically an ArrayList) can now be created in unsorted or sorted order
    // create sorted list
    YailList yailListSorted= YailList.makeList(items, true);
 
-   //now, add the items to a ListPicker, and display the sorted items
+   //now, add the items to a ListPicker, and display the sorted items (the ones we sorted from un-sorted list)
    myListPicker.Elements(yailListSorted);
    myListPicker.open();
 
-   //For debug purpose, display sun-sorted, sorted results in notifier
+   //For debug purpose, display un-sorted, sorted results in notifier
    notifier.ShowMessageDialog("Unsorted\n" + yailListUnsorted + "\n\nSorted\n" + yailListSorted, 
                 "unsorted vs sorted", 
                 "Okay");
